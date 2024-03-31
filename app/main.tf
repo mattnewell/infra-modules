@@ -25,7 +25,8 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "this" {
-  ami           = data.aws_ami.ubuntu
+  ami           = data.aws_ami.ubuntu.id
+  count         = var.instance_count
   instance_type = var.instance_type
 }
 
