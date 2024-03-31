@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 terraform {
-  backend "s3" {}
+  backend "local" {}
 }
 
 data "aws_ami" "ubuntu" {
