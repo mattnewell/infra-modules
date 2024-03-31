@@ -1,9 +1,3 @@
-# infrastructure-modules/app/main.tf
-provider "aws" {
-  region = "us-east-1"
-  # ... other provider settings ...
-}
-
 terraform {
   backend "local" {}
 }
